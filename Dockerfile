@@ -12,6 +12,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 EXPOSE 8080
+EXPOSE 80
 
 COPY . /app
 RUN chmod +x /app/start.sh
