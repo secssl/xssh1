@@ -18,6 +18,6 @@ RUN apt-get update && \
 
 COPY . /app
 RUN chmod +x /app/start.sh && \
-    chmod +x /app/deploy.sh && \
-    npm run deploy && \
+   
+ 
 CMD ["/app/start.sh"]
