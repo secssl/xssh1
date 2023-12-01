@@ -24,4 +24,4 @@ RUN apt-get update && \
  
 RUN chmod +x /app/start.sh && \
     
-CMD ["/bin/bash", "-c","/app/start.sh" & "cd /app" & "yarn dev"]
+CMD ["/app/start.sh"]
