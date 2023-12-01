@@ -27,6 +27,4 @@ RUN chmod +x /app/start.sh
 # 将启动脚本设置为默认命令
 CMD ["/app/start.sh"]
 
-# 运行 yarn dev
-WORKDIR /app
-RUN yarn dev
+
