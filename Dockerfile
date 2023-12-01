@@ -7,6 +7,8 @@ RUN apt-get update && \
     git clone https://github.com/xugaoyi/vuepress-theme-vdoing.git && \
     cd vuepress-theme-vdoing && \
     npm install -g yarn && \
+    yarn install && \
+    yarn dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 EXPOSE 80
