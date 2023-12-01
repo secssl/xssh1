@@ -7,19 +7,20 @@ RUN apt-get update && \
     apt-get install -y nodejs && \
     apt-get install -y net-tools  && \
     apt-get clean && \
-    
+
     #git clone https://github.com/xugaoyi/vuepress-theme-vdoing.git && \
     #cd vuepress-theme-vdoing && \
     npm install -g yarn && \
    
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
+ COPY . /app   
+ RUN cd /app && \
+     yarn install && \
+     yarn dev && \
 
 
-COPY . /app
  
 RUN chmod +x /app/start.sh && \
-    cd /app && \
-    yarn install && \
-    yarn dev && \
+    
 CMD ["/app/start.sh"]
