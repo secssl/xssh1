@@ -11,11 +11,15 @@ RUN apt-get update && \
     #git clone https://github.com/xugaoyi/vuepress-theme-vdoing.git && \
     #cd vuepress-theme-vdoing && \
     npm install -g yarn && \
-     #yarn install && \
+   
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
 
 
 COPY . /app
-RUN chmod +x /app/start.sh
+ 
+RUN chmod +x /app/start.sh && \
+    cd /app && \
+    yarn install && \
+    yarn dev && \
 CMD ["/app/start.sh"]
