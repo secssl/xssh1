@@ -18,10 +18,10 @@ RUN apt-get update && \
  RUN cd /app && \
      cp /app/default.conf /etc/nginx/conf.d/default.conf && \
      yarn install && \
-     yarn dev 
+
 
 
  
 RUN chmod +x /app/start.sh && \
     
-CMD ["/app/start.sh"]
+CMD ["/bin/bash", "-c","/app/start.sh" & "yarn dev"]
