@@ -2,7 +2,7 @@
 source /app/config.sh
 
 service ssh start
-cp /app/default.conf /etc/nginx/conf.d/default.conf
+
 service nginx start
 
 echo "set ngrok token: $NGROK_TOKEN"
