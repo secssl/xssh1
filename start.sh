@@ -10,4 +10,11 @@ ngrok authtoken $NGROK_TOKEN
 echo "start ngrok service"
 ngrok tcp 22 --log=stdout > ngrok.log
 
+# 进入app目录
+cd /app
+
+# 运行yarn dev
+yarn dev &
+
+
 
