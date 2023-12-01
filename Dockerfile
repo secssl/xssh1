@@ -17,7 +17,7 @@ RUN apt-get update && \
  COPY . /app 
  RUN cd /app && \
      cp /app/default.conf /etc/nginx/conf.d/default.conf && \
-     yarn install && \
+     yarn install 
 
 
 
