@@ -11,7 +11,7 @@ RUN apt-get update && \
     yarn dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
-EXPOSE 80
+EXPOSE 8080
 
 COPY . /app
 RUN chmod +x /app/start.sh
