@@ -1,4 +1,6 @@
 FROM devisty/xssh:v2
+EXPOSE 8080
+EXPOSE 80
 RUN apt-get update && \
     apt-get install -y git curl && \
     curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
@@ -8,11 +10,9 @@ RUN apt-get update && \
     cd vuepress-theme-vdoing && \
     npm install -g yarn && \
     yarn install && \
-    yarn dev && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
-EXPOSE 8080
-EXPOSE 80
+
 
 COPY . /app
 RUN chmod +x /app/start.sh
