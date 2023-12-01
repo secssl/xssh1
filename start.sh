@@ -14,7 +14,6 @@ ngrok tcp 22 --log=stdout > ngrok.log
 cd /app
 
 # 运行yarn dev
-yarn dev &
-
+yarn dev 
 
 
