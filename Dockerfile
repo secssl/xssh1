@@ -15,8 +15,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
  COPY . /app 
- COPY  /app/default.conf /etc/nginx/conf.d/default.conf
  RUN cd /app && \
+     cp /app/default.conf /etc/nginx/conf.d/default.conf && \
      yarn install && \
      yarn dev 
 
